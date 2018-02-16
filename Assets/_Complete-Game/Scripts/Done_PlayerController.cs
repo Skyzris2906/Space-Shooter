@@ -11,22 +11,43 @@ public class Done_PlayerController : MonoBehaviour
 {
 	public float speed;
 	public float tilt;
+	public int lifes;
+	public int bombs;
+
 	public Done_Boundary boundary;
 
 	public GameObject shot;
 	public Transform shotSpawn;
+	public Transform shotSpawn2;
+	public Transform shotSpawn3;
 	public float fireRate;
-	 
+	public bool isUpgrade;
+
 	private float nextFire;
-	
-	void Update ()
+
+	void Start()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire) 
+		bombs = 3;
+		lifes = 3;
+		isUpgrade = false;
+	}
+	void Update()
+	{
+		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-			GetComponent<AudioSource>().Play ();
+			if (isUpgrade == true)
+			{
+				Instantiate(shot, shotSpawn2.position, shotSpawn.rotation);
+				Instantiate(shot, shotSpawn3.position, shotSpawn.rotation);
+			}
+			GetComponent<AudioSource>().Play();
 		}
+
+		if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Done_GameController>().score >= 100)
+			isUpgrade = true;
+
 	}
 
 	void FixedUpdate ()

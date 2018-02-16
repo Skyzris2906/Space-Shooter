@@ -25,6 +25,7 @@ public class Done_DestroyByContact : MonoBehaviour
 	{
 		if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
+			Destroy(other.gameObject);
 			return;
 		}
 
@@ -36,11 +37,16 @@ public class Done_DestroyByContact : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver();
+			GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().lifes -= 1;
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<Done_GameController>().UpdateLifes();
+			if (GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().lifes == 0)
+			{
+				gameController.GameOver();
+				Destroy(other.gameObject);
+			}
 		}
 		
 		gameController.AddScore(scoreValue);
-		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}
 }

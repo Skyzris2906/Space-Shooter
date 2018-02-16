@@ -6,32 +6,41 @@ using UnityEngine.UI;
 public class Done_GameController : MonoBehaviour
 {
     public GameObject[] hazards;
-    public Vector3 spawnValues;
-    public int hazardCount;
-    public float spawnWait;
-    public float startWait;
-    public float waveWait;
+	public Vector3 spawnValues;
+	public int hazardCount;
+	public float spawnWait;
+	public float startWait;
+	public float waveWait;
 
-    public Text scoreText;
-    public Text restartText;
-    public Text gameOverText;
+	public Text scoreText;
+	public Text restartText;
+	public Text gameOverText;
+	public Text winText;
+	public Text lifesText;
+	public Text bombsText;
 
-    private bool gameOver;
-    private bool restart;
-    private int score;
+	private bool win;
+	private bool gameOver;
+	private bool restart;
+	public int score;
 
-    void Start()
-    {
-        gameOver = false;
-        restart = false;
-        restartText.text = "";
-        gameOverText.text = "";
-        score = 0;
-        UpdateScore();
-        StartCoroutine(SpawnWaves());
-    }
+	void Start()
+	{
+		winText.text = "";
+		lifesText.text = "Lifes: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().lifes.ToString();
+		win = false;
+		gameOver = false;
+		restart = false;
+		restartText.text = "";
+		gameOverText.text = "";
+		score = 0;
+		UpdateScore();
+		StartCoroutine(SpawnWaves());
 
-    void Update()
+		Time.timeScale = 1;
+	}
+
+	void Update()
     {
         if (restart)
         {
@@ -63,7 +72,14 @@ public class Done_GameController : MonoBehaviour
                 restart = true;
                 break;
             }
-        }
+
+			if (win)
+			{
+				restartText.text = "Press 'R' for Restart";
+				restart = true;
+				break;
+			}
+		}
     }
 
     public void AddScore(int newScoreValue)
@@ -72,14 +88,35 @@ public class Done_GameController : MonoBehaviour
         UpdateScore();
     }
 
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + score;
-    }
+	void UpdateScore()
+	{
+		scoreText.text = "Score: " + score;
 
-    public void GameOver()
-    {
-        gameOverText.text = "Game Over!";
-        gameOver = true;
-    }
+		if (score >= 1000)
+		{
+			Win();
+		}
+
+	}
+
+	public void UpdateBombs()
+	{
+		bombsText = "Bombs: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs.ToString();
+	}
+	public void UpdateLifes()
+	{
+		lifesText.text = "Lifes: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().lifes.ToString();
+	}
+
+	public void Win()
+	{
+		winText.text = "You Won!";
+		win = true;
+	}
+
+	public void GameOver()
+	{
+		gameOverText.text = "Game Over!";
+		gameOver = true;
+	}
 }
