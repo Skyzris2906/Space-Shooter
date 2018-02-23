@@ -27,7 +27,8 @@ public class Done_GameController : MonoBehaviour
 	void Start()
 	{
 		winText.text = "";
-		lifesText.text = "Lifes: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().lifes.ToString();
+		UpdateLifes();
+		UpdateBombs();
 		win = false;
 		gameOver = false;
 		restart = false;
@@ -101,7 +102,7 @@ public class Done_GameController : MonoBehaviour
 
 	public void UpdateBombs()
 	{
-		bombsText = "Bombs: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs.ToString();
+		bombsText.text = "Bombs: " + GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs.ToString();
 	}
 	public void UpdateLifes()
 	{

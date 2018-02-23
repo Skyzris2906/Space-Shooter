@@ -25,7 +25,6 @@ public class Done_DestroyByContact : MonoBehaviour
 	{
 		if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
-			Destroy(other.gameObject);
 			return;
 		}
 
@@ -44,6 +43,8 @@ public class Done_DestroyByContact : MonoBehaviour
 				gameController.GameOver();
 				Destroy(other.gameObject);
 			}
+
+			return;
 		}
 		
 		gameController.AddScore(scoreValue);

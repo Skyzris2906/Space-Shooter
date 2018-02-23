@@ -23,12 +23,16 @@ public class Done_DestroyByBombs : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.LeftShift) && GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs != 0)
+		if (Input.GetKeyDown(KeyCode.LeftShift) && GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs != 0)
 		{
-			GameObject.FindGameObjectWithTag("Player").GetComponent<Done_PlayerController>().bombs = -1;
-			Instantiate(explosion, transform.position, transform.rotation);
-			gameController.AddScore(scoreValue);
-			Destroy(gameObject);
+			BombsExplosion();
 		}
+	}
+
+	public void BombsExplosion()
+	{
+		Instantiate(explosion, transform.position, transform.rotation);
+		gameController.AddScore(scoreValue);
+		Destroy(gameObject);
 	}
 }

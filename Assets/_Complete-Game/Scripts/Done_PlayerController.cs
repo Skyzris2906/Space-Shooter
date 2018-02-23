@@ -47,7 +47,6 @@ public class Done_PlayerController : MonoBehaviour
 
 		if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Done_GameController>().score >= 100)
 			isUpgrade = true;
-
 	}
 
 	void FixedUpdate ()
@@ -67,4 +66,6 @@ public class Done_PlayerController : MonoBehaviour
 		
 		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
 	}
+
+
 }

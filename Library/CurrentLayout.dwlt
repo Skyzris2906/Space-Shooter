@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 817, y: 492}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 6072
+  controlID: 134
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 6073
+  controlID: 10
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 6074
+  controlID: 87
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,8 +228,8 @@ MonoBehaviour:
     y: 0
     width: 385
     height: 253
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 6006
+  controlID: 135
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,14 +440,14 @@ MonoBehaviour:
     height: 457
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1641.3606065826757
+  lastFramingTime: 987.9767619939928
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1987305, y: -0.9104004, z: 1.8571777}
+    m_Target: {x: 0, y: 0, z: 120.45032}
     speed: 2
-    m_Value: {x: -1.1987305, y: -0.9104004, z: 1.8571777}
+    m_Value: {x: 0, y: 0, z: 120.45032}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -471,13 +471,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.35639295, y: -0.21762928, z: 0.08574281, w: 0.9045852}
+    m_Target: {x: 0.31121066, y: -0.20370568, z: 0.068481795, w: 0.9257257}
     speed: 2
-    m_Value: {x: -0.35639295, y: 0.21762928, z: -0.08574281, w: -0.9045852}
+    m_Value: {x: -0.31121066, y: 0.20370568, z: -0.068481795, w: -0.9257257}
   m_Size:
-    m_Target: 8.21732
+    m_Target: 2.3355515
     speed: 2
-    m_Value: 8.21732
+    m_Value: 2.3355515
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -572,9 +572,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da2b0000
+    m_SelectedIDs: aa060000
     m_LastClickedID: 0
-    m_ExpandedIDs: e4affdffd2b8fdffd4bffdff0879ffff82ebffff98ebffff86fbffff000000006e2d0000b62d0000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,18 +636,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Complete-Game/Prefabs
+    - Assets/_Complete-Game/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Skyzr\Documents\Unity\Space Shooter
+  m_LastProjectPath: C:\Users\Skyzr\Documents\Unity\Space-Shooter
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 60270000
     m_LastClickedID: 10080
-    m_ExpandedIDs: 5e270000fc270000fe2700000028000002280000042800004e2d0000
+    m_ExpandedIDs: 000000007a2700009c270000ae270000b42700000e2800004428000074280000a6280000242b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,10 +672,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 34}
+    scrollPos: {x: 0, y: 274}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 5e270000fc270000fe270000002800000228000004280000462d00004e2d0000562d0000
+    m_ExpandedIDs: 000000007a2700009c270000ae270000b42700000e2800004428000074280000a6280000242b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
